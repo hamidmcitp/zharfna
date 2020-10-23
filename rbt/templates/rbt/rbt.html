@@ -1,1 +1,27 @@
 <h1>This is Rbt Page</h1>
+<a href="{% url 'home' %}">Home</a>
+
+{% for rbt in rbts %}
+
+<h2>{{ rbt.RbtName }}</h2>
+<h3>{{ rbt.RbtSinger }}</h3>
+<h3>{{ rbt.RbtCode }}</h3>
+<h3>{{ rbt.RbtOwner }}</h3>
+<h3>{{ rbt.RbtCost }}</h3>
+<h3>{{ rbt.RbtDescription }}</h3>
+<h3>{{ rbt.RbtDate }}</h3>
+
+
+
+
+{% endfor %}
+
+
+
+<!-- RbtName= models.CharField(max_length=40)
+    RbtSinger = models.CharField(max_length=40)
+    RbtCode = models.IntegerField(max_length=10)
+    RbtOwner = models.CharField(max_length=40)
+    RbtCost = models.IntegerField(max_length=4)
+    RbtDescription = models.CharField(max_length=100)
+    RbtDate= models.DateField() -->

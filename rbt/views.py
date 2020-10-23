@@ -1,5 +1,13 @@
 from django.shortcuts import render
+from .models import Singer,Owner,RbtMusic
 
-# Create your views here.
 def rbt(request):
-    return render(request,'rbt/rbt.html')
+
+    # Farakhani az Database = az RbtMusic be rbts
+    rbts = RbtMusic.objects.all()
+
+    return render(request,'rbt/rbt.html', {'rbts': rbts} )
+
+# for Page home
+def home(request):
+    return render(request,'rbt/home.html')

@@ -19,6 +19,7 @@ from rbt import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('rbt/' , views.rbt, name='rbt')
+    path('rbt/' , views.rbt, name='rbt'),
+    path('', views.home, name = 'home'),
     
 ]
